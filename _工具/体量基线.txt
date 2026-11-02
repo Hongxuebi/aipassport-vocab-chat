@@ -1,0 +1,5 @@
+# 体量"棘轮"：这些文件是已知超标（登记在 技术债台账），只警告不拦截。
+# 新文件超标 ⇒ 直接失败。修复后请从这里删掉对应行。
+components/wprov/wprov.c
+components/wprov/wprov_http.c
+main/demo_provision.c

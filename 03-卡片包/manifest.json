@@ -1,0 +1,122 @@
+{
+ "date": "2026-10-22",
+ "theme": "\u5c0f\u5b66",
+ "screen": [
+  240,
+  320
+ ],
+ "stats": {
+  "\u603b\u6570": 10,
+  "\u65b0\u8bcd": 10,
+  "\u590d\u4e60": 0,
+  "\u56de\u7089": 0,
+  "\u9884\u8ba1\u5206\u949f": 1.5,
+  "\u8bcd\u5e93\u603b\u6570": 15,
+  "\u5df2\u5b66": 0,
+  "\u5230\u671f\u672a\u505a": 0
+ },
+ "cards": [
+  {
+   "id": "w0001",
+   "type": "\u65b0\u8bcd",
+   "front": "c/w0001_f.rle",
+   "back": "c/w0001_b.rle",
+   "fsz": 7878,
+   "bsz": 15909,
+   "audio": "a/0001.mp3"
+  },
+  {
+   "id": "w0002",
+   "type": "\u65b0\u8bcd",
+   "front": "c/w0002_f.rle",
+   "back": "c/w0002_b.rle",
+   "fsz": 7716,
+   "bsz": 13587,
+   "audio": "a/0002.mp3"
+  },
+  {
+   "id": "w0003",
+   "type": "\u65b0\u8bcd",
+   "front": "c/w0003_f.rle",
+   "back": "c/w0003_b.rle",
+   "fsz": 9036,
+   "bsz": 14277,
+   "audio": "a/0003.mp3"
+  },
+  {
+   "id": "w0004",
+   "type": "\u65b0\u8bcd",
+   "front": "c/w0004_f.rle",
+   "back": "c/w0004_b.rle",
+   "fsz": 7068,
+   "bsz": 11907,
+   "audio": "a/0004.mp3"
+  },
+  {
+   "id": "w0005",
+   "type": "\u65b0\u8bcd",
+   "front": "c/w0005_f.rle",
+   "back": "c/w0005_b.rle",
+   "fsz": 9069,
+   "bsz": 13674,
+   "audio": "a/0005.mp3"
+  },
+  {
+   "id": "w0006",
+   "type": "\u65b0\u8bcd",
+   "front": "c/w0006_f.rle",
+   "back": "c/w0006_b.rle",
+   "fsz": 9252,
+   "bsz": 14640,
+   "audio": "a/0006.mp3"
+  },
+  {
+   "id": "w0007",
+   "type": "\u65b0\u8bcd",
+   "front": "c/w0007_f.rle",
+   "back": "c/w0007_b.rle",
+   "fsz": 8628,
+   "bsz": 16437,
+   "audio": "a/0007.mp3"
+  },
+  {
+   "id": "w0008",
+   "type": "\u65b0\u8bcd",
+   "front": "c/w0008_f.rle",
+   "back": "c/w0008_b.rle",
+   "fsz": 9801,
+   "bsz": 15786,
+   "audio": "a/0008.mp3"
+  },
+  {
+   "id": "w0009",
+   "type": "\u65b0\u8bcd",
+   "front": "c/w0009_f.rle",
+   "back": "c/w0009_b.rle",
+   "fsz": 8349,
+   "bsz": 13200,
+   "audio": "a/0009.mp3"
+  },
+  {
+   "id": "w0010",
+   "type": "\u65b0\u8bcd",
+   "front": "c/w0010_f.rle",
+   "back": "c/w0010_b.rle",
+   "fsz": 8430,
+   "bsz": 12552,
+   "audio": "a/0010.mp3"
+  },
+  {
+   "id": "zz_end",
+   "type": "\u6536\u5de5",
+   "front": "c/zz_end_f.rle",
+   "back": "c/zz_end_b.rle",
+   "fsz": 8262,
+   "bsz": 10449,
+   "audio": "a/0011.mp3"
+  }
+ ],
+ "extra": {
+  "daily_sentence": "\u4eca\u5929\u6570\u5b66\u8003\u5f97\u4e0d\u9519\uff0c\u7ee7\u7eed\u4fdd\u6301"
+ }
+}

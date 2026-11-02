@@ -1,0 +1,76 @@
+<!doctype html><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<title>单词机 · 网页版</title>
+<style>
+:root{--bg:#FFF8E7;--fg:#2B2B2B;--muted:#8C8273;--accent:#FF9F1C;--ok:#06D6A0;--bad:#EF476F;--mid:#FFD166}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+     height:100vh;display:flex;flex-direction:column;user-select:none;overflow:hidden}
+#bar{height:4px;background:#FFE8BE}#bar>i{display:block;height:100%;width:0;background:var(--accent);transition:width .2s}
+#top{display:flex;justify-content:space-between;padding:10px 16px;font-size:13px;color:var(--muted)}
+#stage{flex:1;display:flex;align-items:center;justify-content:center;padding:8px;position:relative}
+#stage img{max-width:100%;max-height:100%;border-radius:18px;box-shadow:0 6px 24px #0001;transition:transform .12s}
+#stage img:active{transform:scale(.98)}
+#hint{position:absolute;bottom:8px;font-size:12px;color:var(--muted)}
+#btns{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;padding:10px 12px 22px}
+button{border:0;border-radius:16px;padding:16px 0;font-size:16px;font-weight:600;color:#fff;font-family:inherit}
+#no{background:var(--bad)}#mid{background:var(--mid);color:#5a4a1a}#yes{background:var(--ok)}
+button:disabled{opacity:.4}
+#done{display:none;flex-direction:column;align-items:center;justify-content:center;flex:1;gap:10px;font-size:20px}
+</style>
+<div id="bar"><i></i></div>
+<div id="top"><span id="tag">—</span><span id="cnt">0/0</span></div>
+<div id="stage"><img id="pic" alt=""><div id="hint">点一下看意思</div></div>
+<div id="done"><div style="font-size:44px">🎉</div><div>今天的背完了</div><div id="sum" style="font-size:14px;color:#8C8273"></div></div>
+<div id="btns">
+  <button id="no">不认识</button>
+  <button id="mid">模糊</button>
+  <button id="yes">认识</button>
+</div>
+<script>
+const q = new URLSearchParams(location.search);
+let cards=[], i=0, flipped=false, ok=0, bad=0;
+const pic=document.getElementById('pic'), cnt=document.getElementById('cnt'),
+      tag=document.getElementById('tag'), bar=document.querySelector('#bar>i'),
+      stage=document.getElementById('stage'), hint=document.getElementById('hint'),
+      done=document.getElementById('done'), btns=document.getElementById('btns');
+
+fetch('manifest.json').then(r=>r.json()).then(m=>{
+  cards=m.cards.filter(c=>!c.id.startsWith('zz_end'));
+  document.getElementById('sum').textContent=(m.date||'')+' · 共 '+cards.length+' 张';
+  render();
+});
+
+function render(){
+  if(i>=cards.length){ stage.style.display='none'; btns.style.display='none';
+    done.style.display='flex'; return; }
+  const c=cards[i]; flipped=false;
+  pic.src='预览/'+c.id+'_正.png';
+  pic.onclick=flip;
+  hint.style.display='block';
+  cnt.textContent=(i+1)+'/'+cards.length;
+  tag.textContent=c.type||'';
+  bar.style.width=(i/cards.length*100)+'%';
+}
+function flip(){
+  if(flipped) return;
+  flipped=true;
+  pic.src='预览/'+cards[i].id+'_背.png';
+  hint.style.display='none';
+}
+function grade(g){
+  if(!flipped){ flip(); return; }
+  if(g>=2) ok++; else bad++;
+  fetch('review',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify([{id:cards[i].id,grade:g}])}).catch(()=>{});
+  i++; render();
+}
+pic.onclick=flip;
+document.getElementById('no').onclick=()=>grade(0);
+document.getElementById('mid').onclick=()=>grade(1);
+document.getElementById('yes').onclick=()=>grade(2);
+document.addEventListener('keydown',e=>{
+  if(e.key===' '||e.key==='Enter'){e.preventDefault();flip()}
+  if(e.key==='1')grade(0); if(e.key==='2')grade(1); if(e.key==='3'||e.key==='ArrowRight')grade(2);
+});
+</script>

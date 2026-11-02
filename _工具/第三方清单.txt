@@ -1,0 +1,5 @@
+# 第三方/生成代码：分层与体量检查一律豁免（但要在这里登记，登记本身受 review）
+components/wprov/src/qrcodegen.c
+components/wprov/src/qrcodegen.h
+main/fonts/fusion_ui12.c
+main/fonts/fusion_ui16.c

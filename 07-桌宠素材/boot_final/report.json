@@ -1,0 +1,19 @@
+{
+  "sprite": [
+    120,
+    160
+  ],
+  "frames": 27,
+  "bin_bytes": 470495,
+  "avg_kb": 16.99,
+  "total_kb": 458.8,
+  "crop": [
+    1180,
+    211,
+    1664,
+    856
+  ],
+  "fps": 6,
+  "play_seconds": 4.5,
+  "source_seconds": 8.0
+}

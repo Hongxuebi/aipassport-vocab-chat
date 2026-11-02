@@ -1,0 +1,16 @@
+.DS_Store
+__pycache__/
+*.pyc
+build/
+sdkconfig
+sdkconfig.old
+*.bak-*
+*.bin
+*.bundle
+*.wav
+*.ttf
+*.log
+04-字体/_raw/
+_固件备份/
+_参考仓库/
+图鉴/

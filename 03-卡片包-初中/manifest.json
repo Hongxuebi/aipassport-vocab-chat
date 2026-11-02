@@ -1,0 +1,79 @@
+{
+ "date": "2026-10-22",
+ "theme": "初中",
+ "screen": [
+  240,
+  320
+ ],
+ "stats": {
+  "总数": 8,
+  "新词": 8,
+  "复习": 0,
+  "回炉": 0,
+  "预计分钟": 1.2,
+  "词库总数": 15,
+  "已学": 0,
+  "到期未做": 0
+ },
+ "cards": [
+  {
+   "id": "w0001",
+   "front": "c/w0001_f.rle",
+   "back": "c/w0001_b.rle",
+   "audio": "a/w0001.mp3",
+   "类型": "新词"
+  },
+  {
+   "id": "w0002",
+   "front": "c/w0002_f.rle",
+   "back": "c/w0002_b.rle",
+   "audio": "a/w0002.mp3",
+   "类型": "新词"
+  },
+  {
+   "id": "w0003",
+   "front": "c/w0003_f.rle",
+   "back": "c/w0003_b.rle",
+   "audio": "a/w0003.mp3",
+   "类型": "新词"
+  },
+  {
+   "id": "w0004",
+   "front": "c/w0004_f.rle",
+   "back": "c/w0004_b.rle",
+   "audio": "a/w0004.mp3",
+   "类型": "新词"
+  },
+  {
+   "id": "w0005",
+   "front": "c/w0005_f.rle",
+   "back": "c/w0005_b.rle",
+   "audio": "a/w0005.mp3",
+   "类型": "新词"
+  },
+  {
+   "id": "w0006",
+   "front": "c/w0006_f.rle",
+   "back": "c/w0006_b.rle",
+   "audio": "a/w0006.mp3",
+   "类型": "新词"
+  },
+  {
+   "id": "w0007",
+   "front": "c/w0007_f.rle",
+   "back": "c/w0007_b.rle",
+   "audio": "a/w0007.mp3",
+   "类型": "新词"
+  },
+  {
+   "id": "w0008",
+   "front": "c/w0008_f.rle",
+   "back": "c/w0008_b.rle",
+   "audio": "a/w0008.mp3",
+   "类型": "新词"
+  }
+ ],
+ "extra": {
+  "daily_sentence": ""
+ }
+}
